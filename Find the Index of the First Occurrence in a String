@@ -1,0 +1,24 @@
+class Solution {
+public:
+    int strStr(string hs, string ne) {
+        int n = hs.length();
+        int k = ne.length();
+        for(int i =0;i<=n-k;i++){
+            if(hs[i]==ne[0])
+            {
+                bool ff =1;
+                for(int j =0;j<k;j++){
+                    if(hs[i+j]!=ne[j]){
+                        ff=0;
+                        break;
+                    }
+                }
+                if(ff)
+                return i;
+
+
+            }
+        }
+        return -1;
+    }
+};
